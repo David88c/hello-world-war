@@ -11,8 +11,13 @@ jobs:
 
     env:
 <<<<<<< HEAD
+<<<<<<< HEAD
       SONAR_PROJECT_KEY: ${{ secrets.SONAR_PROJECT_KEY }}
       SONAR_ORGANIZATION: ${{ secrets.SONAR_ORGANIZATION }}
+=======
+      SONAR_PROJECT_KEY: David88c_hello-world-war
+      SONAR_ORGANIZATION: david88c
+>>>>>>> 3fa19358390b74651c331f2503f567cedee352ca
 =======
       SONAR_PROJECT_KEY: David88c_hello-world-war
       SONAR_ORGANIZATION: david88c
@@ -41,8 +46,13 @@ jobs:
 
       - name: Tag Docker image
 <<<<<<< HEAD
+<<<<<<< HEAD
         run: docker tag hello-world-war:${{ github.run_id }} nx1x/hello-world-war:${{ github.run_id }}
         
+=======
+        run: docker tag hello-world-war:${{ github.run_id }} david817/hello-world-war:${{ github.run_id }}
+
+>>>>>>> 3fa19358390b74651c331f2503f567cedee352ca
 =======
         run: docker tag hello-world-war:${{ github.run_id }} david817/hello-world-war:${{ github.run_id }}
 
@@ -52,7 +62,11 @@ jobs:
 
       - name: Push Docker image
 <<<<<<< HEAD
+<<<<<<< HEAD
         run: docker push nx1x/hello-world-war:${{ github.run_id }}
+=======
+        run: docker push david817/hello-world-war:${{ github.run_id }}
+>>>>>>> 3fa19358390b74651c331f2503f567cedee352ca
 =======
         run: docker push david817/hello-world-war:${{ github.run_id }}
 >>>>>>> 3fa19358390b74651c331f2503f567cedee352ca
