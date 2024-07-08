@@ -10,23 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       SONAR_PROJECT_KEY: ${{ secrets.SONAR_PROJECT_KEY }}
       SONAR_ORGANIZATION: ${{ secrets.SONAR_ORGANIZATION }}
-=======
-      SONAR_PROJECT_KEY: David88c_hello-world-war
-      SONAR_ORGANIZATION: david88c
->>>>>>> 3fa19358390b74651c331f2503f567cedee352ca
-=======
-      SONAR_PROJECT_KEY: David88c_hello-world-war
-      SONAR_ORGANIZATION: david88c
->>>>>>> 3fa19358390b74651c331f2503f567cedee352ca
-=======
-      SONAR_PROJECT_KEY: David88c_hello-world-war
-      SONAR_ORGANIZATION: david88c
->>>>>>> 3fa19358390b74651c331f2503f567cedee352ca
       SONAR_HOST_URL: https://sonarcloud.io
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
@@ -50,40 +35,13 @@ jobs:
         run: docker build -t hello-world-war:${{ github.run_id }} .
 
       - name: Tag Docker image
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        run: docker tag hello-world-war:${{ github.run_id }} nx1x/hello-world-war:${{ github.run_id }}
+        run: docker tag hello-world-war:${{ github.run_id }} david817/hello-world-war:${{ github.run_id }}
         
-=======
-        run: docker tag hello-world-war:${{ github.run_id }} david817/hello-world-war:${{ github.run_id }}
-
->>>>>>> 3fa19358390b74651c331f2503f567cedee352ca
-=======
-        run: docker tag hello-world-war:${{ github.run_id }} david817/hello-world-war:${{ github.run_id }}
-
->>>>>>> 3fa19358390b74651c331f2503f567cedee352ca
-=======
-        run: docker tag hello-world-war:${{ github.run_id }} david817/hello-world-war:${{ github.run_id }}
-
->>>>>>> 3fa19358390b74651c331f2503f567cedee352ca
       - name: Log in to DockerHub
         run: echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
 
       - name: Push Docker image
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        run: docker push nx1x/hello-world-war:${{ github.run_id }}
-=======
         run: docker push david817/hello-world-war:${{ github.run_id }}
->>>>>>> 3fa19358390b74651c331f2503f567cedee352ca
-=======
-        run: docker push david817/hello-world-war:${{ github.run_id }}
->>>>>>> 3fa19358390b74651c331f2503f567cedee352ca
-=======
-        run: docker push david817/hello-world-war:${{ github.run_id }}
->>>>>>> 3fa19358390b74651c331f2503f567cedee352ca
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
